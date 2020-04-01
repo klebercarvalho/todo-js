@@ -1,0 +1,39 @@
+{
+  "name": "todo-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "contrast:local": "cross-env NODE_ENV=internal node-contrast --application.name=CPQEVENTLOG  --application.group=\"CPQ Suite (IMAP undefined)\" --configFile config/contrast/contrast_security.yaml index.js",
+    "contrast": "node-contrast --application.name=CPQEVENTLOG  --application.group=\"CPQ Suite (IMAP undefined)\" --configFile config/contrast/contrast_security.yaml index.js",
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
+    "lint:fix": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
+    "local": "cross-env NODE_ENV=internal nodemon index.js",
+    "start": "node index.js",
+    "test:clean": "rimraf ./coverage",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage",
+    "posttest": "npm run lint",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "nodemon": "^1.19.2",
+    "prettier": "1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "supertest": "^4.0.2"
+  }
+}
