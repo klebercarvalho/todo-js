@@ -9,7 +9,7 @@
     "lint": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts",
     "lint:fix": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
     "local": "cross-env NODE_ENV=internal nodemon index.js",
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test:clean": "rimraf ./coverage",
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
@@ -31,9 +31,9 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "live-server": "^1.2.1",
     "nodemon": "^1.19.2",
     "prettier": "1.18.2",
-    "prettier-eslint": "^9.0.0",
-    "supertest": "^4.0.2"
+    "prettier-eslint": "^9.0.0"
   }
 }
